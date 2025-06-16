@@ -1087,6 +1087,8 @@ z-index: 1;
   padding: 80px 20px;
   font-family: 'Inter', sans-serif;
   color: #111;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -1160,6 +1162,46 @@ z-index: 1;
   font-size: 1.5rem;
   color: #555;
   margin-bottom: 20px;
+}
+.section-title em{
+  font-style: italic;
+  color: #e74c3c;
+}
+
+@media (max-width: 576px) {
+  .testimonial-card {
+    min-width: 100%;
+    padding: 18px 10px;
+    font-size: 0.98rem;
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  .testimonial-carousel {
+    flex-direction: column;
+    gap: 0;
+  }
+  .carousel-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+    padding: 6px;
+    margin: 8px 0;
+  }
+  .carousel-track {
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .stars {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  blockquote {
+    font-size: 0.98rem;
+  }
+  .author {
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
 }
 
 .intro-text {
@@ -1419,8 +1461,216 @@ blockquote {
     max-height: 100%;
     object-fit: contain;
 }
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 60px 0;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
 
-    </style>
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50; /* Dark blue-gray for sophistication */
+  margin-bottom: 25px;
+  position: relative;
+  text-align: center;
+}
+
+.why-choose-us h2:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #e74c3c; /* Gold accent for luxury */
+  margin: 15px auto 0;
+}
+
+.why-choose-us p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .why-choose-us {
+    padding: 40px 0;
+  }
+  
+  .why-choose-us h2 {
+    font-size: 2rem;
+  }
+  
+  .why-choose-us p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
+/* Comparison Section Styling */
+#comparison {
+  padding: 60px 0;
+  background-color: #f9f9f9; /* Light background */
+}
+
+#comparison h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+#comparison h2:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #e74c3c; /* Gold accent */
+  margin: 15px auto 0;
+}
+
+.comparison-table {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-header {
+  display: flex;
+  background: #2c3e50;
+  color: white;
+  font-weight: bold;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.comparison-row {
+  display: flex;
+  background: white;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.comparison-row:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.feature, .us, .market {
+  padding: 18px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.feature {
+  font-weight: 600;
+  color: #333;
+  background: #f5f5f5;
+}
+
+.us {
+  color: #27ae60; /* Green for advantages */
+  border-left: 1px solid #eee;
+}
+
+.market {
+  color: #e74c3c; /* Red for market drawbacks */
+  border-left: 1px solid #eee;
+}
+
+.fas.fa-check-circle {
+  color: #27ae60;
+  margin-right: 8px;
+}
+
+.fas.fa-times-circle {
+  color: #e74c3c;
+  margin-right: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .comparison-header, .comparison-row {
+    flex-direction: column;
+  }
+  
+  .feature, .us, .market {
+    padding: 12px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .us, .market {
+    border-left: none;
+    border-top: 1px solid #eee;
+  }
+}
+ #process {
+  padding: 80px 0;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, #e74c3c, #2c3e50);
+  z-index: 1;
+}
+
+.timeline-step {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+
+.timeline-step h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.timeline-step p {
+  color: #666;
+  line-height: 1.5;
+}
+ 
+ </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -1510,7 +1760,8 @@ blockquote {
       </div>
     </div>
 
-    <a href="#quote" class="lux-button">Request Your Custom Quote</a>
+ <a href="#quote" class="quote-button step" style="display:block;width:200px;margin:0 auto;">Get a Free Quote</a>
+  </div>
   </div>
 </section>
 
@@ -1839,9 +2090,99 @@ Custom retail boxes are essential for product display and branding.These boxes c
         <a href="#" class="cta-button">Get Started</a></div>
     </div>
 </section>
+<section id="process" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Seamless Process</h2>
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="step-number">1</div>
+        <h3>Consultation</h3>
+        <p>We discuss your vision, budget, and requirements.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-number">2</div>
+        <h3>Design & Prototyping</h3>
+        <p>Our team creates custom mockups for approval.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-number">3</div>
+        <h3>Production</h3>
+        <p>High-quality materials crafted with precision.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-number">4</div>
+        <h3>Delivery</h3>
+        <p>On-time shipping with real-time tracking.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="custom-boxes-section">
+  <div class="container">
+    <h2 class="section-heading">Custom Boxes And Packaging In 4 Steps:</h2>
+    
+    <div class="steps-container">
+      <div class="step">Structural Design</div>
+      <div class="step">Graphic Design</div>
+      <div class="step">Prototyping</div>
+      <div class="step">Production Management</div>
+    </div>
+    
+    <div class="content-block">
+      <p>The Custom Boxes printing experts know what the worst mistakes they can ever commit. Luckily, they are also familiar with how to eliminate it. From dimensions to cuts, and die treatment to interlocking, they have mastered every skill. So, lay the foundation of exceptional boxes on unparalleled structural designs.</p>
+      
+      <ul class="features-list">
+        <li>Offer Diverse Designs And Patterns</li>
+        <li>Functional Minimalism With Full Box Customization</li>
+        <li>Unique Cuts To Create Memorable Designs</li>
+        <li>Practical Design Makes Your Box All-Purpose Marketing Tool</li>
+        <li>Examples Of Great Structural Designs Include A Tuck End, Auto Lock, Tray And Sleeves, And Double-Walled Tuck Front.</li>
+      </ul>
+    </div>
+    
+    <a href="#quote" class="quote-button step" style="display:block;width:200px;margin:0 auto;">Get a Free Quote</a>
+  </div>
+</div>
+<section id="comparison" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Why We Stand Out</h2>
+    
+    <div class="comparison-table">
+      <div class="comparison-header">
+        <div class="feature">Features</div>
+        <div class="us">Our Packaging</div>
+        <div class="market">Standard Market</div>
+      </div>
+      
+      <div class="comparison-row">
+        <div class="feature">Material Quality</div>
+        <div class="us"><i class="fas fa-check-circle"></i> Premium, eco-friendly materials</div>
+        <div class="market"><i class="fas fa-times-circle"></i> Often lower-grade materials</div>
+      </div>
+      
+      <div class="comparison-row">
+        <div class="feature">Customization</div>
+        <div class="us"><i class="fas fa-check-circle"></i> Fully bespoke designs</div>
+        <div class="market"><i class="fas fa-times-circle"></i> Limited template options</div>
+      </div>
+      
+      <div class="comparison-row">
+        <div class="feature">Turnaround Time</div>
+        <div class="us"><i class="fas fa-check-circle"></i> Fast & reliable production</div>
+        <div class="market"><i class="fas fa-times-circle"></i> Often delayed</div>
+      </div>
+      
+      <div class="comparison-row">
+        <div class="feature">Pricing</div>
+        <div class="us"><i class="fas fa-check-circle"></i> Competitive & transparent</div>
+        <div class="market"><i class="fas fa-times-circle"></i> Hidden fees common</div>
+      </div>
+    </div>
+  </div>
+</section>
 <div class="container py-5">
    <h1 class="section-title">Testimonials</h1>
-        <h2>See Why Customers Love <em>TGB</em></h2>
+        <h2 class="section-title">See Why Customers Love <em>Box Craft</em></h2>
         <p class="intro-text">
           We take pride in delivering unparalleled packaging solutions that benefit both retailers and wholesalers.
           Our premium standards meet environmental responsibility, helping thousands of brands propel their businesses forward.
@@ -1850,21 +2191,15 @@ Custom retail boxes are essential for product display and branding.These boxes c
         <!-- Client Logos -->
         <div class="client-logos">
           <div class="logo-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0066cc">
-              <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/>
-            </svg>
+           <img style="height: 20px;" src="wmremove-transformed-removebg-preview.png" alt="">
             <span>TGB</span>
           </div>
           <div class="logo-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#EA4335">
-              <path d="M12.545 10.239v3.821h5.445c-0.712 2.315-2.647 3.972-5.445 3.972-3.332 0-6.033-2.701-6.033-6.032s2.701-6.032 6.033-6.032c1.498 0 2.866 0.549 3.921 1.453l2.814-2.814c-1.784-1.664-4.13-2.675-6.735-2.675-5.523 0-10 4.477-10 10s4.477 10 10 10c8.396 0 10-7.496 10-10 0-0.672-0.067-1.324-0.189-1.955h-9.811z"/>
-            </svg>
+            <img style="height: 20px;" src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="">
             <span>Google</span>
           </div>
           <div class="logo-item">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b67a" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.885 1.48 8.31L12 18.896l-7.416 4.605 1.48-8.31L.001 9.306l8.331-1.151z"/>
-            </svg>
+          <img style="height: 20px;" src="https://1000logos.net/wp-content/uploads/2022/09/Trustpilot-Symbol.png" alt="">
             <span>Trustpilot</span>
           </div>
         </div>
@@ -1941,11 +2276,18 @@ Custom retail boxes are essential for product display and branding.These boxes c
   </div>
 </div>
 
+           
+            <section class="why-choose-us">
+  <h2>Why Choose Us</h2>
+  <p>
+    At the heart of every successful brand is exceptional packaging — and that’s exactly what we deliver. Our bespoke packaging solutions combine elegance, durability, and innovation to make your products stand out on every shelf. With years of expertise and a commitment to premium craftsmanship, we ensure your packaging reflects the luxury and quality your brand deserves. We use only the finest materials and the latest technology to create custom designs tailored to your unique vision. Partner with us and experience unparalleled service, swift turnaround times, and packaging that captivates your customers from the very first glance.
+  </p>
+</section>
     <!-- Features Section -->
     <section id="about" class="py-5">
         <div class="container">
             <div class="section-title">
-                <h2>Why Choose Us</h2>
+                <h2>Our Qualities</h2>
             </div>
             <div class="row">
                 <div class="col-md-4">
