@@ -70,8 +70,8 @@
         .nav-link:hover::after {
             width: 100%;
         }
-        
-        
+
+ 
         .opl {
           color: white;
           background-color: #e74c3c;
@@ -110,7 +110,7 @@
         }
 
         .hero-section {
-            background: #e5ccb6;
+            background: #dfc2a9;
             color: white;
       
             text-align: center;
@@ -202,7 +202,9 @@
         
         /* Footer */
         footer {
-       background: linear-gradient(135deg, rgba(192, 204, 223, 0.9) 0%, rgba(32,82,149,0.7) 100%);
+background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+
+
             color: white;
             padding: 60px 0 20px;
         }
@@ -1089,6 +1091,7 @@ z-index: 1;
   color: #111;
   align-items: center;
   justify-content: center;
+ text-align: center;
 }
 
 
@@ -1109,7 +1112,9 @@ z-index: 1;
 
 .lux-step {
   border-left: 4px solid #000;
-  padding-left: 25px;
+ align-items: center;
+ text-align: center;
+ justify-content: center;
   margin-bottom: 50px;
   transition: border-color 0.3s ease;
 }
@@ -1130,22 +1135,6 @@ z-index: 1;
   line-height: 1.6;
 }
 
-.lux-button {
-  display: block;
-  margin: 60px auto 0;
-  background-color: #111;
-  color: #fff;
-  padding: 14px 36px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.lux-button:hover {
-  background-color: #333;
-}
 .testimonials-container {
   padding: 20px;
 
@@ -1332,7 +1321,7 @@ blockquote {
 }
 
 .carousel-arrow {
-    background: #0066cc;
+    background: #e74c3c;
     color: white;
     border: none;
     width: 50px;
@@ -1460,6 +1449,24 @@ blockquote {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+}
+@media (max-width: 767.98px) {
+  .testimonial-carousel {
+    position: relative;
+    min-height: 220px; /* adjust as needed for your card height */
+  }
+  .carousel-arrow {
+    position: absolute !important;
+    top: 50%;
+
+    z-index: 2;
+  }
+  .carousel-arrow.left-arrow {
+    left: 10px;
+  }
+  .carousel-arrow.right-arrow {
+    right: 10px;
+  }
 }
 /* Why Choose Us Section */
 .why-choose-us {
@@ -1669,7 +1676,111 @@ blockquote {
   color: #666;
   line-height: 1.5;
 }
- 
+ /* Get in Touch Card Styles */
+.get-in-touch-card {
+  background: linear-gradient(120deg, #205295 60%, #e74c3c 100%);
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(32,82,149,0.18);
+  padding: 36px 28px 28px 28px;
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+   align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.get-in-touch-card .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.get-in-touch-card .card-title i {
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 12px;
+  font-size: 1.3rem;
+}
+
+.get-in-touch-card p,
+.get-in-touch-card a {
+  color: #fff;
+  opacity: 0.95;
+  font-size: 1.08rem;
+}
+
+.get-in-touch-card a {
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.get-in-touch-card a:hover {
+  color: #ffd700;
+}
+
+.get-in-touch-card .mt-3 a {
+  font-size: 1.3rem;
+  margin-right: 10px;
+  opacity: 0.85;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.get-in-touch-card .mt-3 a:hover {
+  opacity: 1;
+  color: #ffd700 !important;
+}
+
+/* Contact Form Card Styles */
+.contact-form-card {
+  border-radius: 20px;
+  background: #fff;
+}
+
+.contact-form-card .card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-form-card .card-title i {
+  margin-right: 10px;
+}
+
+.contact-form-card .form-control {
+  border-radius: 10px;
+  border: 1px solid #dbe2ef;
+  box-shadow: none;
+  transition: border-color 0.2s;
+}
+
+.contact-form-card .form-control:focus {
+  border-color: #205295;
+  box-shadow: 0 0 0 2px rgba(32,82,149,0.08);
+}
+
+.contact-form-card .btn-primary {
+  background: linear-gradient(90deg, #205295 60%, #e74c3c 100%);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+}
+
+.contact-form-card .btn-primary:hover {
+  background: linear-gradient(90deg, #e74c3c 60%, #205295 100%);
+}
  </style>
 </head>
 <body>
@@ -1997,7 +2108,14 @@ blockquote {
   </div>
 </div></a>
     </div>
+       <div style="display: flex; justify-content: center;">
+      <a href="#products" class="btn opl btn-hero">
+                            <span>View more</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        </div>
   </div>
+  
 </section>
 
 <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -2129,7 +2247,7 @@ Custom retail boxes are essential for product display and branding.These boxes c
     </div>
     
     <div class="content-block">
-      <p>The Custom Boxes printing experts know what the worst mistakes they can ever commit. Luckily, they are also familiar with how to eliminate it. From dimensions to cuts, and die treatment to interlocking, they have mastered every skill. So, lay the foundation of exceptional boxes on unparalleled structural designs.</p>
+      <p>Box craft printing experts know what the worst mistakes they can ever commit. Luckily, they are also familiar with how to eliminate it. From dimensions to cuts, and die treatment to interlocking, they have mastered every skill. So, lay the foundation of exceptional boxes on unparalleled structural designs.</p>
       
       <ul class="features-list">
         <li>Offer Diverse Designs And Patterns</li>
@@ -2180,6 +2298,79 @@ Custom retail boxes are essential for product display and branding.These boxes c
     </div>
   </div>
 </section>
+
+           
+            <section class="why-choose-us">
+  <h2>Why Choose Us</h2>
+  <p>
+    At the heart of every successful brand is exceptional packaging — and that’s exactly what we deliver. Our bespoke packaging solutions combine elegance, durability, and innovation to make your products stand out on every shelf. With years of expertise and a commitment to premium craftsmanship, we ensure your packaging reflects the luxury and quality your brand deserves. We use only the finest materials and the latest technology to create custom designs tailored to your unique vision. Partner with us and experience unparalleled service, swift turnaround times, and packaging that captivates your customers from the very first glance.
+  </p>
+</section>
+    <!-- Features Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Qualities</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <h3>Premium Quality</h3>
+                        <p>We use only the highest quality materials to ensure your products are protected and look their best.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Custom Solutions</h3>
+                        <p>Our team works with you to create custom packaging solutions tailored to your specific needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Fast Delivery</h3>
+                        <p>We understand time is money. Our efficient production ensures quick turnaround times.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+    <div class="feature-box">
+        <div class="feature-icon">
+            <i class="fas fa-recycle"></i>
+        </div>
+        <h3>Eco-Friendly</h3>
+        <p>We offer sustainable packaging options that are environmentally friendly and responsibly sourced.</p>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="feature-box">
+        <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+        </div>
+        <h3>24/7 Support</h3>
+        <p>Our dedicated support team is always available to help you with questions or concerns.</p>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="feature-box">
+        <div class="feature-icon">
+            <i class="fas fa-thumbs-up"></i>
+        </div>
+        <h3>Customer Satisfaction</h3>
+        <p>Your satisfaction is our top priority. We go the extra mile to exceed your expectations.</p>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
 <div class="container py-5">
    <h1 class="section-title">Testimonials</h1>
         <h2 class="section-title">See Why Customers Love <em>Box Craft</em></h2>
@@ -2276,129 +2467,74 @@ Custom retail boxes are essential for product display and branding.These boxes c
   </div>
 </div>
 
-           
-            <section class="why-choose-us">
-  <h2>Why Choose Us</h2>
-  <p>
-    At the heart of every successful brand is exceptional packaging — and that’s exactly what we deliver. Our bespoke packaging solutions combine elegance, durability, and innovation to make your products stand out on every shelf. With years of expertise and a commitment to premium craftsmanship, we ensure your packaging reflects the luxury and quality your brand deserves. We use only the finest materials and the latest technology to create custom designs tailored to your unique vision. Partner with us and experience unparalleled service, swift turnaround times, and packaging that captivates your customers from the very first glance.
-  </p>
-</section>
-    <!-- Features Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Qualities</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-box-open"></i>
-                        </div>
-                        <h3>Premium Quality</h3>
-                        <p>We use only the highest quality materials to ensure your products are protected and look their best.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3>Custom Solutions</h3>
-                        <p>Our team works with you to create custom packaging solutions tailored to your specific needs.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3>Fast Delivery</h3>
-                        <p>We understand time is money. Our efficient production ensures quick turnaround times.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-    <div class="feature-box">
-        <div class="feature-icon">
-            <i class="fas fa-recycle"></i>
-        </div>
-        <h3>Eco-Friendly</h3>
-        <p>We offer sustainable packaging options that are environmentally friendly and responsibly sourced.</p>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="feature-box">
-        <div class="feature-icon">
-            <i class="fas fa-headset"></i>
-        </div>
-        <h3>24/7 Support</h3>
-        <p>Our dedicated support team is always available to help you with questions or concerns.</p>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="feature-box">
-        <div class="feature-icon">
-            <i class="fas fa-thumbs-up"></i>
-        </div>
-        <h3>Customer Satisfaction</h3>
-        <p>Your satisfaction is our top priority. We go the extra mile to exceed your expectations.</p>
-    </div>
-</div>
-
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
+  <section id="contact" class="py-5" style="background: linear-gradient(135deg, #f8fafc 60%, #e0e7ef 100%);">
+  <div class="container">
+    <div class="section-title text-center mb-4">
+      <h2>Contact Us</h2>
+      <p class="text-muted">Let’s start your packaging journey! Reach out and our team will get back to you within 24 hours.</p>
+    </div>
+    <div class="row justify-content-center">
+      <!-- Get in Touch Card -->
+      <div class="col-md-5 mb-4">
+        <div class="card shadow border-0 h-100 get-in-touch-card">
+          <div class="card-body">
+            <h5 class="card-title mb-3">
+              <i class="fas fa-comments"></i> Let’s Connect!
+            </h5>
+            <p class="mb-2"><i class="fas fa-envelope"></i> <a href="mailto:info@boxcraft.com">info@boxcraft.com</a></p>
+            <p class="mb-2"><i class="fas fa-phone"></i> <a href="tel:+1234567890">+1 234 567 890</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Box Street, Packaging City</p>
+            <div class="mt-3">
+              <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <form class="contact-form">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Your Name" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Your Email" required>
-                            </div>
-                            <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Subject">
-                            </div>
-                            <div class="col-12">
-                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn opl">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-6">
-                    <div class="ps-lg-5 mt-5 mt-lg-0">
-                        <h5 class="mb-3">Our Office</h5>
-                        <p><i class="fas fa-map-marker-alt me-2 text-primary"></i> 123 Packaging Street, Industrial Area, City, Country</p>
-                        <p><i class="fas fa-phone me-2 text-primary"></i> +1 (800) 555-1234</p>
-                        <p><i class="fas fa-envelope me-2 text-primary"></i> info@boxcraft.com</p>
-                        <h5 class="mb-3 mt-4">Business Hours</h5>
-                        <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                        <p>Saturday: 9:00 AM - 2:00 PM</p>
-                        <p>Sunday: Closed</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
+      <!-- Contact Form Card -->
+      <div class="col-md-7">
+        <div class="card shadow border-0 contact-form-card">
+          <div class="card-body">
+            <h5 class="card-title mb-3">
+              <i class="fas fa-paper-plane text-primary"></i> Send Us a Message
+            </h5>
+            <form>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Subject">
+              </div>
+              <div class="mb-3">
+                <textarea style="max-height: 250px;" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+              </div>
+              <div style="display: flex; justify-content: center;">
+              <button type="submit" class="btn btn-primary px-4 py-2">
+                Send Message <i class="fas fa-arrow-right ms-2"></i>
+              </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <a href="#" class="footer-logo">Box<span>Craft</span></a>
+                    <a href="#" class="footer-logo"><span style="color: #000000 !important;"><img style="height: 50px;" src="wmremove-transformed-removebg-preview.png" alt=""></span>Box<span>Craft</span></a>
                     <p>Providing premium packaging solutions since 2010. We help businesses of all sizes protect their products and enhance their brand image.</p>
                     <div class="social-icons mt-3">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
