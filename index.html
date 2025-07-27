@@ -119,15 +119,16 @@
         .hero-section {
             background: #dfc2a9;
             color: white;
-      
+   
             text-align: center;
         }
-        
-        .hero-title {
+     .hero-title {
             font-size: 2.5rem;
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 1rem;
+          
+          text-shadow: 0 2px 8px rgba(44, 62, 80, 0.15);
         }
         
         .hero-subtitle {
@@ -1361,7 +1362,7 @@ blockquote {
   color: white;
   border: none;
   font-size: 1.5rem;
-  padding: 10px;
+
   cursor: pointer;
   border-radius: 50%;
 }
@@ -1900,6 +1901,54 @@ background-color: transparent;
   background: #3182ce;
 }
 
+.box-style-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-wrapper {
+  overflow: hidden;
+  max-width: 1020px; /* 4 cards * 240px + spacing */
+}
+
+.card-container {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  gap: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+ 
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+       
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float-around 15s infinite linear;
+        }
+       
+        @keyframes float-around {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(100px, 50px) rotate(90deg); }
+            50% { transform: translate(200px, 0) rotate(180deg); }
+            75% { transform: translate(100px, -50px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+
 
  </style>
 </head>
@@ -1951,6 +2000,22 @@ background-color: transparent;
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
+                     
+                  <div class="floating-elements">
+            <svg class="floating-element" style="top: 15%; left: 10%; animation-delay: 0s;" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                <rect x="10" y="10" width="60" height="60" rx="5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg class="floating-element" style="top: 60%; left: 85%; animation-delay: 2s;" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="30" r="25" stroke="black" stroke-width="2"/>
+            </svg>
+              <svg class="floating-element" style="top: 60%; left: 85%; animation-delay: 2s;" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="30" r="25" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg class="floating-element" style="top: 75%; left: 20%; animation-delay: 4s;" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                <polygon points="35,5 65,35 35,65 5,35" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+       
                     <h1 class="hero-title">Packaging That Presents & Protects</h1>
                     <p class="hero-subtitle">Custom packaging solutions engineered to elevate your unboxing experience while ensuring maximum product protection</p>
                     <div class="hero-buttons">
@@ -1966,10 +2031,14 @@ background-color: transparent;
                 <div class="col-lg-6 text-center">
                     <img src="Packhelp25647-scaled-removebg-preview-Picsart-AiImageEnhancer.png" alt="Premium Packaging" class="package-image">
                 </div>
+               
             </div>
         </div>
-        
+      
+  
+        </div>
     </section>
+    
     <section class="luxury-process-section">
   <div class="container">
     <h2 class="lux-heading">Unbox Your Brand’s Brilliance</h2>
@@ -2025,7 +2094,7 @@ background-color: transparent;
 <div class="industry-card"><a href="luxury.html" class="full-card-link">
 
   <div class="card-image">
-    <img src="https://img.freepik.com/premium-psd/luxury-gift-box-logo-mockup-with-business-card_544888-14.jpg" alt="Luxury Gift Boxes">
+    <img src="WhatsApp Image 2025-06-24 at 08.12.51_4302ec7a.jpg" alt="Luxury Gift Boxes">
   </div>
   <div class="card-content">
     <h3>Luxury Gift Boxes</h3>
@@ -2043,7 +2112,7 @@ background-color: transparent;
       <!-- Display Packaging -->
       <div class="industry-card"><a href="luxury.html" class="full-card-link">
         <div class="card-image">
-          <img src="https://packmojo.com/blog/images/2021/03/4-tips-designing-display-boxes-thumbnail.jpg" alt="Display Packaging">
+          <img src="WhatsApp Image 2025-06-24 at 08.16.07_f84d9af5.jpg" alt="Display Packaging">
         </div>
         <div class="card-content">
           <h3>Display Packaging</h3>
@@ -2063,7 +2132,7 @@ background-color: transparent;
       <!-- Mylar Bags & Pouches -->
       <div class="industry-card"><a href="luxury.html" class="full-card-link">
         <div class="card-image">
-          <img src="https://boxuppackaging.com/wp-content/uploads/2023/05/Mylar-mylar-bag.jpg" alt="Mylar Bags & Pouches">
+          <img src="WhatsApp Image 2025-06-24 at 08.20.24_3c0d6f5f.jpg" alt="Mylar Bags & Pouches">
         </div>
         <div class="card-content">
           <h3>Mylar Bags & Pouches</h3>
@@ -2081,7 +2150,7 @@ background-color: transparent;
       <!-- Cardboard Packaging -->
       <div class="industry-card"><a href="luxury.html" class="full-card-link">
         <div class="card-image">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLDMBJB5MWSe3XMHmGwTVR7vFGbRQhIskURw&s" alt="Cardboard Packaging">
+          <img src="WhatsApp Image 2025-06-24 at 08.22.44_a4806de8.jpg" alt="Cardboard Packaging">
         </div>
         <div class="card-content">
           <h3>Cardboard Packaging</h3>
@@ -2099,7 +2168,7 @@ background-color: transparent;
       <!-- Eco Friendly Boxes -->
       <div class="industry-card"><a href="luxury.html" class="full-card-link">
         <div class="card-image">
-          <img src="https://packhelp-landing-assets.s3.eu-central-1.amazonaws.com/wp-content/uploads/2021/04/21102405/Packhelp25647-scaled.jpg" alt="Eco Friendly Boxes">
+          <img src="WhatsApp Image 2025-06-24 at 08.31.46_60f63ebe.jpg" alt="Eco Friendly Boxes">
         </div>
         <div class="card-content">
           <h3>Eco Friendly Boxes</h3>
@@ -2117,7 +2186,7 @@ background-color: transparent;
       <!-- Retail Boxes -->
       <div class="industry-card"><a href="luxury.html" class="full-card-link">
         <div class="card-image">
-          <img src="https://virginpackaging.com/wp-content/uploads/2021/12/Custom-retail-boxes-1.jpg" alt="Retail Boxes">
+          <img src="WhatsApp Image 2025-06-24 at 08.38.26_b80e7636.jpg" alt="Retail Boxes">
         </div>
         <div class="card-content">
           <h3>Retail Boxes</h3>
@@ -2135,7 +2204,7 @@ background-color: transparent;
       <!-- Cosmetic Boxes -->
       <div class="industry-card"><a href="luxury.html" class="full-card-link">
         <div class="card-image">
-          <img src="https://printway.com.pk/wp-content/uploads/2022/11/04-37.webp" alt="Cosmetic Boxes">
+          <img src="WhatsApp Image 2025-06-24 at 08.42.09_8758919b.jpg" alt="Cosmetic Boxes">
         </div>
         <div class="card-content">
           <h3>Cosmetic Boxes</h3>
@@ -2153,7 +2222,7 @@ background-color: transparent;
       <!-- Food And Beverage -->
       <div class="industry-card"><a href="luxury.html" class="full-card-link">
         <div class="card-image">
-          <img src="https://custompackagingpro.com/storage/main_images/product_listing/custom-popcorn-boxes_1724783200.webp" alt="Food And Beverage">
+          <img src="WhatsApp Image 2025-06-24 at 08.43.56_34029fec.jpg" alt="Food And Beverage">
         </div>
         <div class="card-content">
           <h3>Food And Beverage</h3>
@@ -2171,7 +2240,7 @@ background-color: transparent;
       <!-- Rigid Boxes -->
       <div class="industry-card"><a href="luxury.html" class="full-card-link">
         <div class="card-image">
-          <img src="https://themailerbox.com/wp-content/uploads/2023/10/Custom-Shape-Box-1024x683.jpg" alt="Rigid Boxes">
+          <img src="WhatsApp Image 2025-06-24 at 08.45.47_c2539990.jpg" alt="Rigid Boxes">
         </div>
         <div class="card-content">
           <h3>Rigid Boxes</h3>
@@ -2189,7 +2258,7 @@ background-color: transparent;
       <!-- Jewelry Packaging -->
       <div class="industry-card"><a href="luxury.html" class="full-card-link">
                <div class="card-image">
-          <img src="https://kling.de/files/Unterseiten/englisch/header/jewellery-box.jpg" alt="Jewelry Packaging">
+          <img src="WhatsApp Image 2025-06-24 at 08.47.41_709ed08c.jpg" alt="Jewelry Packaging">
         </div>
         <div class="card-content">
           <h3>Jewelry Packaging</h3>
@@ -2207,7 +2276,7 @@ background-color: transparent;
       <!-- CBD Packaging -->
       <div class="industry-card"><a href="luxury.html" class="full-card-link">
         <div class="card-image">
-          <img src="https://fastcustomboxes.com/wp-content/uploads/2020/03/ezgif.com-gif-maker.jpg" alt="CBD Packaging">
+          <img src="WhatsApp Image 2025-06-24 at 08.49.45_4f302e8f.jpg" alt="CBD Packaging">
         </div>
         <div class="card-content">
           <h3>CBD Packaging</h3>
@@ -2225,7 +2294,7 @@ background-color: transparent;
      <!-- Pharmaceutical Packaging -->
 <div class="industry-card"><a href="luxury.html" class="full-card-link">
   <div class="card-image">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSfbp1gND-cBP8JdWgNRM7GMn7ddZitIVqrQ&s" alt="Pharmaceutical Packaging">
+    <img src="WhatsApp Image 2025-06-24 at 08.52.09_d3a2d7cd.jpg" alt="Pharmaceutical Packaging">
   </div>
   <div class="card-content">
     <h3>Pharmaceutical Packaging</h3>
@@ -2517,7 +2586,7 @@ Custom retail boxes are essential for product display and branding.These boxes c
         <div class="client-logos">
           <div class="logo-item">
            <img style="height: 20px;" src="wmremove-transformed-removebg-preview.png" alt="">
-            <span>TGB</span>
+            <span>BoxCraft</span>
           </div>
           <div class="logo-item">
             <img style="height: 20px;" src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="">
@@ -2538,7 +2607,7 @@ Custom retail boxes are essential for product display and branding.These boxes c
 
         <!-- Testimonial Carousel -->
         <div class="testimonial-carousel">
-          <button class="carousel-arrow left-arrow">&lt;</button>
+          <button class="carousel-arrow left-arrow">←</button>
 
           <div class="carousel-track">
             <!-- Repeat these testimonial-card elements as needed -->
@@ -2579,7 +2648,7 @@ Custom retail boxes are essential for product display and branding.These boxes c
             </div>
           </div>
 
-          <button class="carousel-arrow right-arrow">&gt;</button>
+          <button class="carousel-arrow right-arrow">→</button>
         </div>
 
         <div class="carousel-dots">
@@ -2860,7 +2929,6 @@ Custom retail boxes are essential for product display and branding.These boxes c
   });
 
   updateCarousel(); // Initial call
-
 
     </script>
 </body>
