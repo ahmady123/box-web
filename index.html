@@ -1962,104 +1962,184 @@ background-color: transparent;
 bottom: 0!important;
 padding-top: 20px;
 }
-
- .slider-wrapper {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-    position: relative;
-    text-align: center;
-    overflow: hidden !important;
-    display: flex; /* Add this line */
-    align-items: center; /* Add this line */
-    justify-content: center; /* This line is already present */
-
-}
-
-
-    .card-grid-wrapper {
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .card-grid {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      gap: 20px;
-    }
-
-    .card-box {
-      flex: 0 0 calc((100% - 40px) / 3);
-      max-width: calc((100% - 40px) / 3);
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      text-align: center;
-    }
-
-    .card-box img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .card-box h3 {
-      margin: 15px 0 5px;
-      font-size: 1.3rem;
-    }
-
-    .card-box p {
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    .card-box button {
-      margin-top: 10px;
-      padding: 8px 16px;
-      background-color: #d32f2f;
-      color: white;
-      border: none;
-      border-radius: 6px;
-    }
-
-    .card-box button:hover {
-      background-color: #b71c1c;
-    }
-
-    .arrow-btn {
-      background: white;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-      cursor: pointer;
-      position: absolute;
-     top: 50% !important;
-      transform: translateY(-50%) !important;
-   
-      font-size: 18px;
-      z-index: 2;
-     
-    }
-
-    .arrow-btn.left {
-     left: 10px;
-    }
-
-    .arrow-btn.right {
-      right: 10px;
-    }
-
-    @media (max-width: 768px) {
-      .card-box {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
-    }
-
+    /* Cards container */
+        .cards-wrapper {
+            position: relative;
+        }
+        
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        /* Card styles */
+        .card {
+            width: 280px;
+            height: 400px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: none; /* Hidden by default, shown via JS */
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-image {
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* Navigation controls */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+        
+        .nav-button {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: white;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-button:hover {
+            background-color: #3b82f6;
+            color: white;
+        }
+        
+        .nav-button svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        
+        .pagination {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .pagination-dot {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .pagination-dot.active {
+            background-color: #4338ca;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 1024px) {
+            .card {
+                width: 250px;
+                height: 320px;
+            }
+            
+            .card-image {
+                font-size: 3.5rem;
+            }
+            
+            .card-content {
+                padding: 1.25rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .card {
+                width: 220px;
+                height: 300px;
+            }
+            
+            .card-title {
+                font-size: 1.1rem;
+            }
+            
+            .card-description {
+                font-size: 0.9rem;
+            }
+            
+            .nav-button {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            
+            .nav-button svg {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .page-container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .header {
+                margin-bottom: 1.5rem;
+            }
+            
+            .card {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .pagination-dot {
+                width: 0.6rem;
+                height: 0.6rem;
+            }
+        }
  </style>
 </head>
 <body>
@@ -2588,34 +2668,31 @@ Custom retail boxes are essential for product display and branding.These boxes c
     <a href="#quote" class="quote-button step" style="display:block;width:200px;margin:0 auto;">Get a Free Quote</a>
   </div>
 </div>
-
-<div class="slider-wrapper">
-  <div class="card-grid-wrapper">
-  <h1 class="fw-bold text-center my-4">Explore Our Signature Packaging Collection</h1>
-<h5 class="text-center text-muted mb-5 px-3">
-  Discover a curated range of packaging solutions designed to enhance product appeal, ensure protection, and elevate your brand’s presentation across every industry.
-</h5>
-  <button class="arrow-btn left" onclick="showPrevious()">&#10094;</button>
-
-
-
-  <div class="card-grid" id="cardGrid">
-    <div class="card-box"><img src="five_panel.jpeg"><h3>Five Panel Hanger</h3><p>Ideal for eye-catching, suspended displays.</p><button>Explore</button></div>
-    <div class="card-box"><img src="pillow.jpeg"><h3>Pillow boxes</h3><p>Stylish design with protective inner space.</p><button>Explore</button></div>
-    <div class="card-box"><img src="cigarette.jpeg"><h3>Cigarette boxes</h3><p>A modern classic for sleek product packing.</p><button>Explore</button></div>
-    <div class="card-box"><img src="frenchfry.jpeg"><h3>French Fry Boxes</h3><p>Functional, compact, and ready for service.</p><button>Explore</button></div>
-    <div class="card-box"><img src="create a beautiful elegent image of fulll flap shipping boxes to add in my website-Picsart-AiImageEnhancer.jpg"><h3>Full Flap Shipping Boxes</h3><p>Reliable support for heavier shipping loads.</p><button>Explore</button></div>
-    <div class="card-box"><img src="pizza boxes.jpeg"><h3>Pizza boxes</h3><p>Smartly built to retain warmth and shape.</p><button>Explore</button></div>
-    <div class="card-box"><img src="sleeve.jpeg"><h3>Premium Drawer Boxes</h3><p>Elegant presentation with smooth sliding.</p><button>Explore</button></div>
-    <div class="card-box"><img src="tuckend.jpeg"><h3>Tuck End</h3><p>Trusted design for retail and delivery use.</p><button>Explore</button></div>
-    <div class="card-box"><img src="magnetic.jpeg"><h3>Magnetic Closure boxes</h3><p>Secure packaging with a luxury feel.</p><button>Explore</button></div>
-  </div>
-</div>
-
-
-  <button class="arrow-btn right" onclick="showNext()">&#10095;</button>
-</div>
-
+ <div class="main-container">
+            <!-- Card Display Container -->
+            <div class="cards-wrapper">
+                <!-- Cards Container -->
+                <div id="cards-container" class="cards-container">
+                  
+                    <!-- Cards will be dynamically shown/hidden -->
+                </div>
+                
+                <!-- Navigation Controls -->
+                <div class="navigation">
+                    <button id="prev-btn" class="nav-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <div id="pagination" class="pagination"></div>
+                    <button id="next-btn" class="nav-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
 
 <section id="comparison" class="py-5 bg-light">
   <div class="container">
@@ -3084,69 +3161,151 @@ Custom retail boxes are essential for product display and branding.These boxes c
   updateCarousel(); // Initial call
 
     </script>
-    <script>
-       const cardGrid = document.getElementById('cardGrid');
-  const cardss = Array.from(document.querySelectorAll('.card-box'));
-  const cardsPerPage = 3;
-  let currentIndex = 0;
-  let allowTransition = true;
+ 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Add the cool font to the document
+        const fontLink = document.createElement('link');
+        fontLink.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap';
+        fontLink.rel = 'stylesheet';
+        document.head.appendChild(fontLink);
 
-  // 1. Clone first N cards and append for seamless loop
-  const cloneFirstCards = cardss.slice(0, cardsPerPage).map(card => card.cloneNode(true));
-  cloneFirstCards.forEach(clone => cardGrid.appendChild(clone));
+        const cards = [
+            { title: "Five Panel Hanger", image: "five_panel.jpeg", description: "Ideal for eye-catching, suspended displays." },
+            { title: "Pillow boxes", image: "pillow.jpeg", description: "Stylish design with protective inner space." },
+            { title: "Cigarette boxes", image: "cigarette.jpeg", description: "A modern classic for sleek product packing." },
+            { title: "French Fry Boxes", image: "frenchfry.jpeg", description: "Functional, compact, and ready for service." },
+            { title: "Full Flap Shipping Boxes", image: "create a beautiful elegent image of fulll flap shipping boxes to add in my website-Picsart-AiImageEnhancer.jpg", description: "Reliable support for heavier shipping loads." },
+            { title: "Pizza boxes", image: "pizza boxes.jpeg", description: "Smartly built to retain warmth and shape." },
+            { title: "Premium Drawer Boxes", image: "sleeve.jpeg", description: "Elegant presentation with smooth sliding." },
+            { title: "Tuck End", image: "tuckend.jpeg", description: "Trusted design for retail and delivery use." },
+            { title: "Magnetic Closure boxes", image: "magnetic.jpeg", description: "Secure packaging with a luxury feel." }
+        ];
 
-  function renderCards(jump = false) {
-    const cardWidth = cardss[0].offsetWidth + 20;
-    const offset = currentIndex * cardWidth;
-    if (jump) {
-      cardGrid.style.transition = 'none'; // No animation for jump
-    } else {
-      cardGrid.style.transition = 'transform 0.5s ease-in-out';
-    }
-  cardGrid.style.transform = `translateX(-${offset}px)`;
-  }
+        const cardsContainer = document.getElementById('cards-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const pagination = document.getElementById('pagination');
 
-  function showNext() {
-    if (!allowTransition) return;
-    allowTransition = false;
-    currentIndex++;
-    renderCards();
+        let currentPage = 0;
+        let cardsPerPage = getCardsPerPage();
+        let totalPages = Math.ceil(cards.length / cardsPerPage);
 
-    // If we just showed the cloned cards, reset to start
-    const totalCards = cardss.length;
-    setTimeout(() => {
-      if (currentIndex >= totalCards) {
-        currentIndex = 0;
-        renderCards(true); // jump to original first cards
-      }
-      allowTransition = true;
-    }, 500);
-  }
+        // Add CSS for animations and styling
+        const style = document.createElement('style');
+        style.textContent = `
+          
+            .slide-left {
+                animation: slideLeft 0.5s ease-in-out;
+            }
+            .slide-right {
+                animation: slideRight 0.5s ease-in-out;
+            }
+            @keyframes slideLeft {
+                from { transform: translateX(-100px); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideRight {
+                from { transform: translateX(100px); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
 
-  function showPrevious() {
-    if (!allowTransition) return;
-    allowTransition = false;
+        function getCardsPerPage() {
+            if (window.innerWidth < 640) return 1;
+            if (window.innerWidth < 1024) return 2;
+            return 3;
+        }
 
-    if (currentIndex === 0) {
-      // Jump to cloned cards first
-      currentIndex = cardss.length;
-      renderCards(true);
-      setTimeout(() => {
-        currentIndex--;
-        renderCards();
-        allowTransition = true;
-      }, 50);
-    } else {
-      currentIndex--;
-      renderCards();
-      setTimeout(() => {
-        allowTransition = true;
-      }, 500);
-    }
-  }
+        // Create cards
+        cards.forEach((card) => {
+            const cardElement = document.createElement('div');
+            cardElement.className = 'card';
+            cardElement.innerHTML = `
+                <img src="${card.image}" alt="${card.title}" class="card-img-top" style="height: 200px; width: 100%; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+                <div class="card-content">
+                    <h3 class="card-title">${card.title}</h3>
+                    <p class="card-description">${card.description}</p>
+                    <button style="margin-top: 1rem; padding: 0.5rem 1.5rem; background-color: #4338ca; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all 0.3s ease;">Explore</button>
+                </div>
+            `;
+            cardsContainer.appendChild(cardElement);
+        });
 
-  window.addEventListener('resize', () => renderCards(true));
-  renderCards(true);
-    </script>
+        function createPaginationDots() {
+            pagination.innerHTML = '';
+            for (let i = 0; i < totalPages; i++) {
+                const dot = document.createElement('button');
+                dot.className = `pagination-dot ${i === 0 ? 'active' : ''}`;
+                dot.setAttribute('data-page', i);
+                dot.addEventListener('click', () => goToPage(i));
+                pagination.appendChild(dot);
+            }
+        }
+
+        function updateCards(direction) {
+            const allCards = cardsContainer.querySelectorAll('.card');
+            const start = currentPage * cardsPerPage;
+            const end = start + cardsPerPage;
+
+            // Apply animation classes based on direction
+            allCards.forEach((card, index) => {
+                if (index >= start && index < end) {
+                    card.style.display = 'block';
+                    card.classList.add(direction === 'left' ? 'slide-left' : 'slide-right');
+                } else {
+                    card.style.display = 'none';
+                    card.classList.remove('slide-left', 'slide-right');
+                }
+            });
+
+            // Remove animation classes after animation completes
+            setTimeout(() => {
+                allCards.forEach(card => {
+                    card.classList.remove('slide-left', 'slide-right');
+                });
+            }, 500);
+
+            // Update pagination dots
+            pagination.querySelectorAll('.pagination-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentPage);
+            });
+        }
+
+        function goToPage(pageNum) {
+            const direction = pageNum > currentPage ? 'left' : 'right';
+            currentPage = pageNum;
+            updateCards(direction);
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentPage = (currentPage - 1 + totalPages) % totalPages;
+            updateCards('right');
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentPage = (currentPage + 1) % totalPages;
+            updateCards('left');
+        });
+
+        window.addEventListener('resize', () => {
+            const newCardsPerPage = getCardsPerPage();
+            if (newCardsPerPage !== cardsPerPage) {
+                cardsPerPage = newCardsPerPage;
+                totalPages = Math.ceil(cards.length / cardsPerPage);
+                if (currentPage >= totalPages) {
+                    currentPage = 0;
+                }
+                createPaginationDots();
+                updateCards();
+            }
+        });
+
+        // Initialize
+        createPaginationDots();
+        updateCards();
+    });
+</script>
 </body>
 </html>
