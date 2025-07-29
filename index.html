@@ -1694,112 +1694,130 @@ blockquote {
   color: #666;
   line-height: 1.5;
 }
- /* Get in Touch Card Styles */
-.get-in-touch-card {
-  background: linear-gradient(120deg, #205295 60%, #e74c3c 100%);
-  color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(32,82,149,0.18);
-  padding: 36px 28px 28px 28px;
-  position: relative;
-  overflow: hidden;
-  min-height: 320px;
-   align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+.contact-info-box {
+    background: linear-gradient(120deg, #205295 60%, #e74c3c 100%);
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(32,82,149,0.18);
+    padding: 36px 28px 28px 28px;
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
-.get-in-touch-card .card-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 18px;
-  display: flex;
-  align-items: center;
-}
+  .contact-info-box .info-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.get-in-touch-card .card-title i {
-  background: rgba(255,255,255,0.18);
-  border-radius: 50%;
-  padding: 10px;
-  margin-right: 12px;
-  font-size: 1.3rem;
-}
+  .contact-info-box .info-title i {
+    background: rgba(255,255,255,0.18);
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 12px;
+    font-size: 1.3rem;
+  }
 
-.get-in-touch-card p,
-.get-in-touch-card a {
-  color: #fff;
-  opacity: 0.95;
-  font-size: 1.08rem;
-}
+  .contact-info-box p,
+  .contact-info-box a {
+    color: #fff;
+    opacity: 0.95;
+    font-size: 1.08rem;
+  }
 
-.get-in-touch-card a {
-  text-decoration: underline;
-  transition: color 0.2s;
-}
+  .contact-info-box a {
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
 
-.get-in-touch-card a:hover {
-  color: #ffd700;
-}
+  .contact-info-box a:hover {
+    color: #ffd700;
+  }
 
-.get-in-touch-card .mt-3 a {
-  font-size: 1.3rem;
-  margin-right: 10px;
-  opacity: 0.85;
-  transition: opacity 0.2s, color 0.2s;
-}
+  .contact-info-box .social-links a {
+    font-size: 1.3rem;
+    margin-right: 10px;
+    opacity: 0.85;
+    transition: opacity 0.2s, color 0.2s;
+  }
 
-.get-in-touch-card .mt-3 a:hover {
-  opacity: 1;
-  color: #ffd700 !important;
-}
+  .contact-info-box .social-links a:hover {
+    opacity: 1;
+    color: #ffd700 !important;
+  }
 
-/* Contact Form Card Styles */
-.contact-form-card {
-  border-radius: 20px;
-  background: #fff;
-}
+  /* Message Form Box Styles */
+  .message-form-box {
+    border-radius: 20px;
+    background: #fff;
+    padding: 30px;
+  }
 
-.contact-form-card .card-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+  .message-form-box .form-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.contact-form-card .card-title i {
-  margin-right: 10px;
-}
+  .message-form-box .form-control {
+    border-radius: 10px;
+    border: 1px solid #dbe2ef;
+    box-shadow: none;
+    transition: border-color 0.2s;
+    padding: 12px 15px;
+  }
 
-.contact-form-card .form-control {
-  border-radius: 10px;
-  border: 1px solid #dbe2ef;
-  box-shadow: none;
-  transition: border-color 0.2s;
-}
+  .message-form-box .form-control:focus {
+    border-color: #205295;
+    box-shadow: 0 0 0 2px rgba(32,82,149,0.08);
+  }
 
-.contact-form-card .form-control:focus {
-  border-color: #205295;
-  box-shadow: 0 0 0 2px rgba(32,82,149,0.08);
-}
+  .message-form-box .submit-btn {
+    background: linear-gradient(90deg, #205295 60%, #e74c3c 100%);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+    padding: 10px 30px;
+    color: white;
+  }
 
-.contact-form-card .btn-primary {
-  background: linear-gradient(90deg, #205295 60%, #e74c3c 100%);
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: background 0.2s;
-}
+  .message-form-box .submit-btn:hover {
+    background: linear-gradient(90deg, #e74c3c 60%, #205295 100%);
+  }
 
-.contact-form-card .btn-primary:hover {
-  background: linear-gradient(90deg, #e74c3c 60%, #205295 100%);
-}
-/* From Uiverse.io by krlozCJ */ 
+  /* Section Styles */
+  .contact-section {
+    background: linear-gradient(135deg, #f8fafc 60%, #e0e7ef 100%);
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .section-header h2 {
+    font-weight: 700;
+    color: #2c3e50;
+  }
+
+  .section-header p {
+    color: #7f8c8d;
+  }/* From Uiverse.io by krlozCJ */ 
 /* Inverted Theme: White Background, Black Text */
 .containere {
 
@@ -2961,45 +2979,46 @@ Custom retail boxes are essential for product display and branding.These boxes c
 
 
     <!-- Contact Section -->
-  <section id="contact" class="py-5" style="background: linear-gradient(135deg, #f8fafc 60%, #e0e7ef 100%);">
+  <section id="contact" class="contact-section py-5">
   <div class="container">
-    <div class="section-title text-center mb-4">
+    <div class="section-header">
       <h2>Contact Us</h2>
-      <p class="text-muted">Let’s start your packaging journey! Reach out and our team will get back to you within 24 hours.</p>
+      <p>Let's start your packaging journey! Reach out and our team will get back to you within 24 hours.</p>
     </div>
     <div class="row justify-content-center">
-      <!-- Get in Touch Card -->
+      <!-- Contact Info Box -->
       <div class="col-md-5 mb-4">
-        <div class="card shadow border-0 h-100 get-in-touch-card">
+        <div class="contact-info-box shadow h-100">
           <div class="card-body">
-            <h5 class="card-title mb-3">
-             <i class="fas fa-headset me-2"></i>Get in Touch
+            <h5 class="info-title">
+              <i class="fas fa-headset me-2"></i>Get in Touch
             </h5>
-             <p class="mb-4" style="color:#ecf0f1;">We’re here to answer your questions and help you find the perfect packaging solution for your brand.</p>
+            <p class="mb-4">We're here to answer your questions and help you find the perfect packaging solution for your brand.</p>
             <p class="mb-2"><i class="fas fa-envelope"></i> <a href="mailto:info@boxcraft.com">info@boxcraft.com</a></p>
             <p class="mb-2"><i class="fas fa-phone"></i> <a href="tel:+1234567890">+1 234 567 890</a></p>
             <p><i class="fas fa-map-marker-alt"></i> 123 Box Street, Packaging City</p>
-            <p> <i class="fas fa-clock"></i>Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM<br>Sun: Closed</p>
-             <div class="mt-4">
-            <a href="https://maps.google.com" target="_blank" class="btn btn-light btn-sm rounded-pill px-4" style="color:#e74c3c;font-weight:600;">
-              <i class="fas fa-map"></i> View Map
-            </a>
-          </div>
-            <div class="mt-3">
-              <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
-              <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+            <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM<br>Sun: Closed</p>
+            <div class="mt-4">
+              <a href="https://maps.google.com" target="_blank" class="btn btn-light btn-sm rounded-pill px-4" style="color:#e74c3c;font-weight:600;">
+                <i class="fas fa-map"></i> View Map
+              </a>
+            </div>
+            <div class="social-links mt-3">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
           </div>
         </div>
       </div>
-      <!-- Contact Form Card -->
+      
+      <!-- Message Form Box -->
       <div class="col-md-7">
-        <div class="card shadow border-0 contact-form-card">
+        <div class="message-form-box shadow h-100">
           <div class="card-body">
-            <h5 class="card-title mb-3">
-              <i class="fas fa-paper-plane text-primary"></i> Send Us a Message
+            <h5 class="form-title">
+              <i class="fas fa-paper-plane text-primary me-2"></i>Send Us a Message
             </h5>
             <form>
               <div class="row">
@@ -3014,17 +3033,16 @@ Custom retail boxes are essential for product display and branding.These boxes c
                 <input type="text" class="form-control" placeholder="Subject">
               </div>
               <div class="mb-3">
-                <textarea style=" max-height: 290px;" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                <textarea class="form-control" rows="4" placeholder="Your Message" required style="max-height: 290px;"></textarea>
               </div>
-              <div style="display: flex; justify-content: center;">
-              <button type="submit" class="btn btn-primary px-4 py-2">
-                Send Message <i class="fas fa-arrow-right ms-2"></i>
-              </button>
-              
+              <div class="text-center">
+                <button type="submit" class="submit-btn px-4 py-2">
+                  Send Message <i class="fas fa-arrow-right ms-2"></i>
+                </button>
               </div>
               <div class="mt-4 text-center">
-                    <span style="color:#888;">Prefer email? <a href="mailto:info@boxcraft.com" style="color:#e74c3c;text-decoration:underline;">info@boxcraft.com</a></span>
-                  </div>
+                <span style="color:#888;">Prefer email? <a href="mailto:info@boxcraft.com" style="color:#e74c3c;text-decoration:underline;">info@boxcraft.com</a></span>
+              </div>
             </form>
           </div>
         </div>
@@ -3032,7 +3050,6 @@ Custom retail boxes are essential for product display and branding.These boxes c
     </div>
   </div>
 </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
