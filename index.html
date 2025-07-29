@@ -1707,6 +1707,12 @@ blockquote {
     justify-content: center;
     text-align: center;
   }
+.contact-info-box, 
+.message-form-box {
+
+  min-height: 320px !important; /* Adjust this value as needed */
+ 
+}
 
   .contact-info-box .info-title {
     font-size: 1.5rem;
@@ -1765,7 +1771,7 @@ blockquote {
     font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    margin-bottom: 18px;
+   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2036,7 +2042,17 @@ padding-top: 20px;
             color: #666;
             font-size: 0.95rem;
         }
-        
+        a.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+a.card:hover {
+    transform: translateY(-5px);
+    text-decoration: none;
+}
         /* Navigation controls */
         .navigation {
             display: flex;
@@ -3009,6 +3025,7 @@ Custom retail boxes are essential for product display and branding.These boxes c
               <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
+           
           </div>
         </div>
       </div>
@@ -3215,18 +3232,62 @@ Custom retail boxes are essential for product display and branding.These boxes c
         fontLink.rel = 'stylesheet';
         document.head.appendChild(fontLink);
 
-        const cards = [
-            { title: "Five Panel Hanger", image: "five_panel.jpeg", description: "Ideal for eye-catching, suspended displays." },
-            { title: "Pillow boxes", image: "pillow.jpeg", description: "Stylish design with protective inner space." },
-            { title: "Cigarette boxes", image: "cigarette.jpeg", description: "A modern classic for sleek product packing." },
-            { title: "French Fry Boxes", image: "frenchfry.jpeg", description: "Functional, compact, and ready for service." },
-            { title: "Full Flap Shipping Boxes", image: "create a beautiful elegent image of fulll flap shipping boxes to add in my website-Picsart-AiImageEnhancer.jpg", description: "Reliable support for heavier shipping loads." },
-            { title: "Pizza boxes", image: "pizza boxes.jpeg", description: "Smartly built to retain warmth and shape." },
-            { title: "Premium Drawer Boxes", image: "sleeve.jpeg", description: "Elegant presentation with smooth sliding." },
-            { title: "Tuck End", image: "tuckend.jpeg", description: "Trusted design for retail and delivery use." },
-            { title: "Magnetic Closure boxes", image: "magnetic.jpeg", description: "Secure packaging with a luxury feel." }
-        ];
-
+       const cards = [
+    { 
+        title: "Five Panel Hanger", 
+        image: "five_panel.jpeg", 
+        description: "Ideal for eye-catching, suspended displays.",
+        link: "/five-panel-hanger" 
+    },
+    { 
+        title: "Pillow boxes", 
+        image: "pillow.jpeg", 
+        description: "Stylish design with protective inner space.",
+        link: "/pillow-boxes" 
+    },
+    { 
+        title: "Cigarette boxes", 
+        image: "cigarette.jpeg", 
+        description: "A modern classic for sleek product packing.",
+        link: "/cigarette-boxes" 
+    },
+    { 
+        title: "French Fry Boxes", 
+        image: "frenchfry.jpeg", 
+        description: "Functional, compact, and ready for service.",
+        link: "/french-fry-boxes" 
+    },
+    { 
+        title: "Full Flap Shipping Boxes", 
+        image: "create a beautiful elegent image of fulll flap shipping boxes to add in my website-Picsart-AiImageEnhancer.jpg", 
+        description: "Reliable support for heavier shipping loads.",
+        link: "/full-flap-shipping-boxes" 
+    },
+    { 
+        title: "Pizza boxes", 
+        image: "pizza boxes.jpeg", 
+        description: "Smartly built to retain warmth and shape.",
+        link: "/pizza-boxes" 
+    },
+    { 
+        title: "Premium Drawer Boxes", 
+        image: "sleeve.jpeg", 
+        description: "Elegant presentation with smooth sliding.",
+        link: "/premium-drawer-boxes" 
+    },
+    { 
+        title: "Tuck End", 
+        image: "tuckend.jpeg", 
+        description: "Trusted design for retail and delivery use.",
+        link: "/tuck-end-boxes" 
+    },
+    { 
+        title: "Magnetic Closure boxes", 
+        image: "magnetic.jpeg", 
+        description: "Secure packaging with a luxury feel.",
+        link: "/magnetic-closure-boxes" 
+    }
+];
         const cardsContainer = document.getElementById('cards-container');
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
@@ -3263,16 +3324,16 @@ Custom retail boxes are essential for product display and branding.These boxes c
             return 3;
         }
 
-        // Create cards
-        cards.forEach((card) => {
-            const cardElement = document.createElement('div');
-            cardElement.className = 'card';
-            cardElement.innerHTML = `
-                <img src="${card.image}" alt="${card.title}" class="card-img-top" style="height: 200px; width: 100%; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px;">
-                <div class="card-content">
-                    <h3 class="card-title">${card.title}</h3>
-                    <p class="card-description">${card.description}</p>
-                   <button style="
+ cards.forEach((card) => {
+    const cardElement = document.createElement('a');
+    cardElement.href = card.link;
+    cardElement.className = 'card';
+    cardElement.innerHTML = `
+        <img style = "height: 200px"src="${card.image}" alt="${card.title}" class="card-img-top">
+        <div class="card-content">
+            <h3 class="card-title">${card.title}</h3>
+            <p class="card-description">${card.description}</p>
+             <button style="
     color: white;
     background-color: #e74c3c;
     border: 2px solid #e74c3c;
@@ -3300,10 +3361,10 @@ Custom retail boxes are essential for product display and branding.These boxes c
         pointer-events: none;
     "></span>
 </button>
-                </div>
-            `;
-            cardsContainer.appendChild(cardElement);
-        });
+        </div>
+    `;
+    cardsContainer.appendChild(cardElement);
+});
 
         function createPaginationDots() {
             pagination.innerHTML = '';
