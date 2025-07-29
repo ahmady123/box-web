@@ -2140,6 +2140,29 @@ padding-top: 20px;
                 height: 0.6rem;
             }
         }
+
+
+.section-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -1px;
+   
+    
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #555;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
  </style>
 </head>
 <body>
@@ -2668,7 +2691,12 @@ Custom retail boxes are essential for product display and branding.These boxes c
     <a href="#quote" class="quote-button step" style="display:block;width:200px;margin:0 auto;">Get a Free Quote</a>
   </div>
 </div>
- <div class="main-container">
+ <div class="main-container bg-light">
+  <div class="section-header">
+  <h1>Discover Our Signature Packaging Styles</h1>
+  <p>Explore a curated selection of custom box designs crafted to elevate your brand and product experience.</p>
+</div>
+
             <!-- Card Display Container -->
             <div class="cards-wrapper">
                 <!-- Cards Container -->
@@ -3227,7 +3255,34 @@ Custom retail boxes are essential for product display and branding.These boxes c
                 <div class="card-content">
                     <h3 class="card-title">${card.title}</h3>
                     <p class="card-description">${card.description}</p>
-                    <button style="margin-top: 1rem; padding: 0.5rem 1.5rem; background-color: #4338ca; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all 0.3s ease;">Explore</button>
+                   <button style="
+    color: white;
+    background-color: #e74c3c;
+    border: 2px solid #e74c3c;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;"
+    onmouseover="this.style.backgroundColor='#c0392b'; this.style.borderColor='#c0392b'; this.style.boxShadow='0 5px 15px rgba(231, 76, 60, 0.4)'; this.style.transform='translateY(-3px) scale(1.02)'; this.querySelector('.gloss').style.animation='opl-gloss 0.5s forwards';"
+    onmouseout="this.style.backgroundColor='#e74c3c'; this.style.borderColor='#e74c3c'; this.style.boxShadow='none'; this.style.transform='none'; this.querySelector('.gloss').style.animation='none';">
+    Explore
+    <span class="gloss" style="
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        z-index: 0;
+        pointer-events: none;
+    "></span>
+</button>
                 </div>
             `;
             cardsContainer.appendChild(cardElement);
