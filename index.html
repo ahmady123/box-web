@@ -2453,6 +2453,236 @@ blockquote::before {
             padding: 2rem;
             text-align: center;
         }
+        :root {
+            --primary-red: #dc2626;
+            --dark-red: #b91c1c;
+            --light-red: #ef4444;
+            --red-hover: #fef2f2;
+        }
+
+       
+       
+        /* Custom Dropdown Styles */
+        @media (min-width: 769px) {
+            .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+           
+            .dropdown .nav-link:hover {
+                background: none !important;
+                border-radius: 0;
+                box-shadow: none !important;
+            }
+        }
+       
+        @media (max-width: 768px) {
+            .dropdown .dropdown-menu {
+                display: none !important;
+            }
+        }
+
+        .industriess-dropdown {
+            background: white;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
+            padding: 2rem;
+            min-width: 900px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: dropdownFadeIn 0.3s ease-out;
+            position: absolute;
+            top: 100%;
+            z-index: 1000;
+        }
+
+        @keyframes dropdownFadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .industriess-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .industriess-dropdown .dropdown-item {
+            padding: 1rem 1.25rem;
+            color: #374151;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 0.9rem;
+            text-decoration: none;
+            position: relative;
+            border-left: 3px solid transparent;
+        }
+
+        .industriess-dropdown .dropdown-item::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 1.25rem;
+            width: 0;
+            height: 2px;
+            background: var(--primary-red);
+            transition: width 0.3s ease;
+        }
+
+        .industriess-dropdown .dropdown-item:hover {
+            color: var(--primary-red);
+            background: none;
+            border-left-color: var(--primary-red);
+        }
+
+        .industriess-dropdown .dropdown-item:hover::after {
+            width: calc(100% - 2.5rem);
+        }
+
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .industriess-dropdown {
+                display: none !important;
+            }
+           
+            .industriess-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .industriess-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+:root {
+            --primary-red: #dc2626;
+            --dark-red: #b91c1c;
+            --light-red: #ef4444;
+            --red-hover: #fef2f2;
+        }
+
+       
+       
+        /* Custom Dropdown Styles */
+        @media (min-width: 769px) {
+            .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+           
+            .dropdown .nav-link:hover {
+                background: none !important;
+                border-radius: 0;
+                box-shadow: none !important;
+            }
+        }
+       
+        @media (max-width: 768px) {
+            .dropdown .dropdown-menu {
+                display: none !important;
+            }
+        }
+
+        .topselling-dropdown {
+            background: white;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
+            padding: 2rem;
+            min-width: 900px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: dropdownFadeIn 0.3s ease-out;
+            position: absolute;
+            top: 100%;
+            z-index: 1000;
+        }
+
+        @keyframes dropdownFadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .topselling-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .topselling-dropdown .dropdown-item {
+            padding: 1rem 1.25rem;
+            color: #374151;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 0.9rem;
+            text-decoration: none;
+            position: relative;
+            border-left: 3px solid transparent;
+        }
+
+        .topselling-dropdown .dropdown-item::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 1.25rem;
+            width: 0;
+            height: 2px;
+            background: var(--primary-red);
+            transition: width 0.3s ease;
+        }
+
+        .topselling-dropdown .dropdown-item:hover {
+            color: var(--primary-red);
+            background: none;
+            border-left-color: var(--primary-red);
+        }
+
+        .topselling-dropdown .dropdown-item:hover::after {
+            width: calc(100% - 2.5rem);
+        }
+
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .topselling-dropdown {
+                display: none !important;
+            }
+           
+            .topselling-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .topselling-grid {
+                grid-template-columns: 1fr;
+            }
+        }
  </style>
 </head>
 <body>
@@ -2505,11 +2735,67 @@ blockquote::before {
                         </div>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                           <li class="nav-item dropdown">
+                        <a class="nav-link" href="#industries" id="industriessDropdown" role="button">Industries</a>
+                        <div class="dropdown-menu industriess-dropdown" aria-labelledby="industriesDropdown">
+                            <div class="industriess-grid">
+                                <a class="dropdown-item" href="#bags">Advertising boxes</a>
+                                <a class="dropdown-item" href="#booklets">Agriculture & Farming Packaging</a>
+                                <a class="dropdown-item" href="#boxes-foam">Amazon Boxes</a>
+                                <a class="dropdown-item" href="#business-cards">Apparel Boxes</a>
+                                <a class="dropdown-item" href="#business-stickers">Appliances Boxes</a>
+                                <a class="dropdown-item" href="#die-cut-stickers">Automotive Boxes</a>
+                                <a class="dropdown-item" href="#vinyl-stickers">Child Resistant Boxes</a>
+                                <a class="dropdown-item" href="#decals">Consumer Product Boxes</a>
+                                <a class="dropdown-item" href="#pr-box">Custom Bakery Boxes</a>
+                                <a class="dropdown-item" href="#blister-cards">Custom Beverages Boxes</a>
+                                <a class="dropdown-item" href="#bookmarks">Custom CBD Boxes</a>
+                                <a class="dropdown-item" href="#brochures">Custom Hemp Boxes</a>
+                                <a class="dropdown-item" href="#cd-jackets">Electronic Boxes</a>
+                                <a class="dropdown-item" href="#circle-sticker">Entertainment & Leisure Boxes</a>
+                                <a class="dropdown-item" href="#jewelry-bags">Fashion & Clothing Boxes</a>
+                                <a class="dropdown-item" href="#tissue-paper">Hotels & Resturants Packaging</a>
+                                <a class="dropdown-item" href="#waterproof-stickers">Household Packaging</a>
+                                <a class="dropdown-item" href="#folders">Light Bulb Boxes</a>
+                                <a class="dropdown-item" href="#pvc-bags">Pharmaceutical Packaging</a>
+                                <a class="dropdown-item" href="#table-tents">Real Estate Boxes</a>
+                                <a class="dropdown-item" href="#tags">Research & Diagnostic Packaging</a>
+                                <a class="dropdown-item" href="#vacuum-bag">Sports Boxes</a>
+                                <a class="dropdown-item" href="#vinyl-banners">Textile Boxes</a>
+                                <a class="dropdown-item" href="#vinyl-banners">Tobacco Boxes</a>
+                            </div>
+                            <div style="display: flex; justify-content: center;">
+      <a href="#products" class="btn opl btn-hero">
+                          View all
+                           
+                        </a>
+                        </div>
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                   <li class="nav-item dropdown">
+                        <a class="nav-link" href="#top-selling" id="topsellingDropdown" role="button">Top Selling</a>
+                        <div class="dropdown-menu topselling-dropdown" aria-labelledby="topsellingDropdown">
+                            <div class="topselling-grid">
+                                <a class="dropdown-item" href="Cardboard-Packaging">Cardboard Packaging</a>
+                                <a class="dropdown-item" href="#CBD-Packaging">CBD Packaging</a>
+                                <a class="dropdown-item" href="#Cosmetic-Boxes">Cosmetic Boxes</a>
+                                <a class="dropdown-item" href="#Display-Boxes">Display Boxes</a>
+                                <a class="dropdown-item" href="#Eco-Friendly-Boxes">Eco-Friendly Boxes</a>
+                                <a class="dropdown-item" href="#Food-and-Beverages">Food and Beverages</a>
+                                <a class="dropdown-item" href="#Gift-Boxes">Gift Boxes</a>
+                                <a class="dropdown-item" href="#Metalized-Boxes">Metalized Boxes</a>
+                                <a class="dropdown-item" href="#Mylar-Bags-Pouches">Mylar Bags & Pouches</a>
+                                <a class="dropdown-item" href="#Retail-Boxes">Retail Boxes</a>
+                                <a class="dropdown-item" href="#Rigid-Boxes">Rigid Boxes</a>
+                                <a class="dropdown-item" href="#Sticker-Lable">Sticker & Lable</a>
+                            </div>
+                            <div style="display: flex; justify-content: center;">
+      <a href="#products" class="btn opl btn-hero">
+                          View all
+                           
+                        </a>
+                        </div>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
