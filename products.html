@@ -1068,6 +1068,187 @@ background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   margin: 0 auto;
   padding: 0 20px;
 }
+.products-section {
+  padding: 40px 0;
+  background: linear-gradient(to bottom, #ffffff 0%, #f9f9f9 100%);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.section-header h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.section-header h2 {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.highlight {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.intro-text {
+  color: #666;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(231, 76, 60, 0.15);
+  border-color: rgba(231, 76, 60, 0.3);
+}
+.card-image img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #e74c3c;
+ 
+
+}
+
+.card-content {
+  padding: 18px;
+}
+
+.card-content h3 {
+  color: #2c3e50;
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.features-list li {
+  padding: 4px 0;
+  color: #555;
+  font-size: 0.85rem;
+  position: relative;
+  padding-left: 16px;
+  line-height: 1.4;
+}
+
+.features-list li:before {
+  content: "•";
+  color: #e74c3c;
+  position: absolute;
+  left: 4px;
+  font-size: 1.1rem;
+  top: 2px;
+}
+
+.feature-title {
+  font-weight: 500;
+  color: #333;
+}
+
+.explore-btn {
+  background: transparent;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.explore-btn:hover {
+  background-color: #e74c3c;
+  color: white;
+  transform: translateX(3px);
+  box-shadow: 0 3px 8px rgba(231, 76, 60, 0.3);
+}
+
+.explore-btn::after {
+  content: "→";
+  margin-left: 5px;
+  transition: transform 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.explore-btn:hover::after {
+  transform: translateX(4px);
+}
+
+@media (max-width: 780px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+ 
+  .section-header h1 {
+    font-size: 1.6rem;
+  }
+ 
+  .card-image img {
+    height: 120px;
+  }
+ 
+  .card-content {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.full-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 </style>
 </head>
 
@@ -1122,7 +1303,7 @@ background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
                         </div>
                     </li>
                            <li class="nav-item dropdown">
-<a class="nav-link" href="#products" id="productsDropdown" role="button">Products</a>
+<a class="nav-link" href="products.html" id="productsDropdown" role="button">Products</a>
                         <div class="dropdown-menu products-dropdown" aria-labelledby="productsDropdown">
                             <div class="products-grid">
                                 <a class="dropdown-item" href="#bags">Bags</a>
@@ -1130,9 +1311,6 @@ background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
                                 <a class="dropdown-item" href="#boxes-foam">Boxes with Foams</a>
                                 <a class="dropdown-item" href="#business-cards">Business Cards</a>
                                 <a class="dropdown-item" href="#business-stickers">Custom Business Stickers</a>
-                                <a class="dropdown-item" href="#die-cut-stickers">Custom Die Cut Stickers</a>
-                                <a class="dropdown-item" href="#sticker-paper">Custom Sticker Paper</a>
-                                <a class="dropdown-item" href="#vinyl-stickers">Custom Vinyl Stickers</a>
                                 <a class="dropdown-item" href="#decals">Decals</a>
                                 <a class="dropdown-item" href="#pr-box">PR Box</a>
                                 <a class="dropdown-item" href="#blister-cards">Blister Cards</a>
@@ -1248,7 +1426,7 @@ Think this looks good? Wait till you dive into our product universe — a powerh
 
                 <div class="hero-buttons">
                     <a href="#products" class="btn opl btn-hero">
-                        <span>Explore Products</span>
+                        <span>Explore top Selling</span>
                         <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                     <a href="#contact" class="btn btn-outline-light btn-hero">
@@ -1270,6 +1448,251 @@ Think this looks good? Wait till you dive into our product universe — a powerh
     </div>
     
 </section>
+
+<section class="products-section">
+  <div class="container">
+    <div class="section-header">
+      <h1>Products</h1>
+      <h2>One-Shop For All Products <span class="highlight">Select Yours</span></h2>
+      <p class="intro-text">
+        Choose from an array of style and elegance exemplars at our extensive library.
+        We give you complete freedom to shop for your product.
+      </p>
+    </div>
+
+    <div class="product-grid">
+   
+     <!-- Luxury Gift Boxes -->
+<div class="product-card"><a href="luxury.html" class="full-card-link">
+
+  <div class="card-image">
+    <img src="TRINITY-CHAMBERS.jpg" alt="High-quality custom bags">
+</div>
+
+<div class="card-content">
+    <h3>Custom Bags</h3>
+    <ul class="features-list">
+        <li><span class="feature-title">Durable materials</span></li>
+        <li>Fully customizable sizes</li>
+        <li>Multiple printing options</li>
+    </ul>
+    <div style="display: flex; justify-content: center;">
+        <a href=""><button class="explore-btn">Explore</button></a>
+    </div>
+</div>
+
+</div>
+</a>
+      <!-- Display Packaging -->
+      <div class="product-card"><a href="luxury.html" class="full-card-link">
+        <div class="card-image">
+          <img src="Packaging_Business_Stickers_450x450.jpg" alt="Display Packaging">
+        </div>
+        <div class="card-content">
+          <h3>Custom Business Stickers</h3>
+    <ul class="features-list">
+        <li><span class="feature-title">High-quality adhesive</span></li>
+        <li>Vibrant, long-lasting print</li>
+        <li>Perfect for branding & packaging</li>
+    </ul>
+          <div style="display: flex; justify-content: center;">
+           <div style="display: flex; justify-content: center;">
+              <a href=""><button class="explore-btn">Explore </button></a>
+        </div>
+        </div>
+        </div>
+      </div>
+</a>
+      <!-- Mylar Bags & Pouches -->
+      <div class="product-card"><a href="luxury.html" class="full-card-link">
+        <div class="card-image">
+          <img src="decals.jpg" alt="Custom decals for branding and decoration">
+        </div>
+        <div class="card-content">
+          <h3>Custom Decals</h3>
+          <ul class="features-list">
+            <li><span class="feature-title">Weather-resistant materials</span></li>
+        <li>Precision-cut designs</li>
+        <li>Perfect for windows, walls & vehicles</li>
+          </ul>
+              <div style="display: flex; justify-content: center;">
+              <a href=""><button class="explore-btn">Explore </button></a>
+        </div>
+        </div>
+      </div></a>
+
+      <!-- Cardboard Packaging -->
+      <div class="product-card"><a href="luxury.html" class="full-card-link">
+        <div class="card-image">
+          <img src="fashion-brochure-design.jpg" alt="Custom printed brochures for businesses">
+        </div>
+        <div class="card-content">
+          <h3>Custom brochures</h3>
+          <ul class="features-list">
+            <li><span class="feature-title">High-quality printing</span></li>
+        <li>Professional layouts</li>
+        <li>Perfect for marketing & presentations</li>
+          </ul>
+   <div style="display: flex; justify-content: center;">
+              <a href=""><button class="explore-btn">Explore </button></a>
+        </div>
+        </div>
+      </div></a>
+
+      <!-- Eco Friendly Boxes -->
+      <div class="product-card"><a href="luxury.html" class="full-card-link">
+        <div class="card-image">
+          <img src="1bWQrEJ5qDvLAv1R0vZ8ew5NjZbl5mvokEw8Ay0iT.jpg" alt="Custom printed tissue paper for packaging">
+        </div>
+        <div class="card-content">
+          <h3>Custom Tissue paper</h3>
+          <ul class="features-list">
+             <li><span class="feature-title">Soft, premium quality</span></li>
+        <li>Custom prints & patterns</li>
+        <li>Perfect for gifting & product wrapping</li>
+          </ul>
+       <div style="display: flex; justify-content: center;">
+              <a href=""><button class="explore-btn">Explore </button></a>
+        </div>
+        </div>
+      </div></a>
+
+      <!-- Retail Boxes -->
+      <div class="product-card"><a href="luxury.html" class="full-card-link">
+        <div class="card-image">
+          <img src="TABLE-TENTS-3.jpg" alt="Custom printed table tents for promotions">
+        </div>
+        <div class="card-content">
+          <h3>Custom Table Tents</h3>
+          <ul class="features-list">
+            <li><span class="feature-title">Durable cardstock material</span></li>
+        <li>High-quality vibrant printing</li>
+        <li>Perfect for menus, promotions & displays</li>
+          </ul>
+             <div style="display: flex; justify-content: center;">
+              <a href=""><button class="explore-btn">Explore </button></a>
+        </div>
+        </div>
+      </div></a>
+
+      <!-- Cosmetic Boxes -->
+      <div class="product-card"><a href="luxury.html" class="full-card-link">
+        <div class="card-image">
+          <img src="AdobeStock_79257952.jpg" alt="Cosmetic BoxesCustom printed booklets for branding and presentations">
+        </div>
+        <div class="card-content">
+          <h3>Custom Booklets</h3>
+          <ul class="features-list">
+            <li><span class="feature-title">Premium paper quality</span></li>
+        <li>Multi-page customizable layouts</li>
+        <li>Perfect for catalogs, manuals & presentations</li>
+          </ul>
+          <div style="display: flex; justify-content: center;">
+              <a href=""><button class="explore-btn">Explore </button></a>
+        </div>
+        </div>
+      </div></a>
+
+      <!-- Food And Beverage -->
+      <div class="product-card"><a href="luxury.html" class="full-card-link">
+        <div class="card-image">
+          <img src="a5a4aea5-5e70-4923-9f3f-b886759fbd3f_removalai_preview.png" alt="Food And Beverage">
+        </div>
+        <div class="card-content">
+          <h3>Food And Beverage</h3>
+          <ul class="features-list">
+            <li><span class="feature-title">Food grade, non-toxic</span></li>
+            <li>Spill and leak-proof</li>
+            <li>Smudge-free printing</li>
+          </ul>
+         <div style="display: flex; justify-content: center;">
+              <a href=""><button class="explore-btn">Explore </button></a>
+        </div>
+        </div>
+      </div></a>
+
+      <!-- Rigid Boxes -->
+      <div class="product-card"><a href="luxury.html" class="full-card-link">
+        <div class="card-image">
+          <img src="WhatsApp Image 2025-06-24 at 08.45.47_c2539990.jpg" alt="Rigid Boxes">
+        </div>
+        <div class="card-content">
+          <h3>Rigid Boxes</h3>
+          <ul class="features-list">
+            <li><span class="feature-title">Restselling setup boxes</span></li>
+            <li>Elevate products' dilemma</li>
+            <li>Ultimate protection</li>
+          </ul>
+          <div style="display: flex; justify-content: center;">
+       <a href=""><button class="explore-btn">Explore </button></a>
+        </div>
+        </div>
+      </div></a>
+
+      <!-- Jewelry Packaging -->
+      <div class="product-card"><a href="luxury.html" class="full-card-link">
+               <div class="card-image">
+          <img src="WhatsApp Image 2025-06-24 at 08.47.41_709ed08c.jpg" alt="Jewelry Packaging">
+        </div>
+        <div class="card-content">
+          <h3>Jewelry Packaging</h3>
+          <ul class="features-list">
+            <li><span class="feature-title">Luxury presentation</span></li>
+            <li>Velvet-lined interiors</li>
+            <li>Custom inserts</li>
+          </ul>
+        <div style="display: flex; justify-content: center;">
+          <a href=""><button class="explore-btn">Explore </button></a>
+        </div>
+        </div>
+      </div></a>
+
+      <!-- CBD Packaging -->
+      <div class="product-card"><a href="luxury.html" class="full-card-link">
+        <div class="card-image">
+          <img src="WhatsApp Image 2025-06-24 at 08.49.45_4f302e8f.jpg" alt="CBD Packaging">
+        </div>
+        <div class="card-content">
+          <h3>CBD Packaging</h3>
+          <ul class="features-list">
+            <li><span class="feature-title">Child-resistant</span></li>
+            <li>UV-protected</li>
+            <li>Compliance ready</li>
+          </ul>
+             <div style="display: flex; justify-content: center;">
+              <a href=""><button class="explore-btn">Explore </button></a>
+        </div>
+        </div>
+      </div></a>
+
+     <!-- Pharmaceutical Packaging -->
+<div class="product-card"><a href="luxury.html" class="full-card-link">
+  <div class="card-image">
+    <img src="WhatsApp Image 2025-06-24 at 08.52.09_d3a2d7cd.jpg" alt="Pharmaceutical Packaging">
+  </div>
+  <div class="card-content">
+    <h3>Pharmaceutical Packaging</h3>
+    <ul class="features-list">
+      <li><span class="feature-title">Tamper-evident</span></li>
+      <li>Child-resistant</li>
+      <li>Regulatory compliant</li>
+    </ul>
+    <div style="display: flex; justify-content: center;">
+     <a href=""><button class="explore-btn">Explore </button></a>
+    </div>
+  </div>
+</div></a>
+    </div>
+       <div style="display: flex; justify-content: center;">
+      <a href="#products" class="btn opl btn-hero">
+                            <span>View more</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        </div>
+  </div>
+ 
+</section>
+
   <!-- Footer -->
     <footer>
         <div class="container">
